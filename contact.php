@@ -79,7 +79,7 @@ include_once 'findvip.php'; } ?></p></li>
 </nav>
          <div class="container">
 		 <div class="about">
-         <h1>ABOUT US</h1>
+         <h1>CONTACT US</h1>
 		 
           <p>
              <br>

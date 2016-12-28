@@ -1,34 +1,23 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL);
 ini_set('display_errors', 1);
-    session_start();
-echo "hi";	
-	$servername = "localhost";
-	$username = "id338184_shoestore";
-	$password = "shoestore";
-	$dbname = "id338184_shoestore";
-
-	//connect using mysql_connect
-    $conn = mysql_connect($servername,$username,$password); 
-
-    if (!$conn) {echo "Cannot connect to MySQL";} 
-	else {echo "connection sucess ";}
-echo "you are here";    
-    //select shoestore database
-    $db = mysql_select_db($dbname, $conn);
-
-	//connect using mysqli_connect
-    $db2 = new mysqli($servername, $username, $password, $dbname);
-    
-    if (!$db) {
-        die ('Can\'t use shoestore : ' . mysql_error());
-    }
-
-    
-    try {
-        $pdo = new PDO("mysql:host=$servername;dbname=$dbname",$username,$password);
-        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    } catch(PDOException $e) {
-       
-    }
+    include('main-header.html.php');
+	
 ?>
+         
+    	
+         <div class="container">
+		 <div class="about">
+  <div class="jumbotron">
+    <h1><b>  About Us</h1></b>
+    
+</div>
+         Kick off your old shoes, sit back, and breathe a sigh of relief. Whatever your foot, fit, or fancy, you've finally found the best place to buy the perfect pair every time. Welcome to ShoeStop, where millions have enjoyed the largest variety of shoes since 2000. With the most loved labels, sought-after styles, and hard-to-find sizes, browsing is a breeze – find your faves fast or peruse until your heart's content. You name it; we've got it. In fact, our endless selection also includes clothing, bags, and accessories – more than a million products across your favorite brands. All with free shipping and free exchanges. Plus, when you join ShoeFan Rewards (for free!), the more you spend, the more points you'll have to cash-in toward your next wish-list pair. So, go ahead! See how easy it is to match your unique taste and shape to the styles that make you look and feel your best for every occasion.
+       </div>  
+     </div>             
+         <?php
+	 include_once 'footer.php';
+	 ?>
+    
+</body>
+</html>

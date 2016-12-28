@@ -1,6 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+error_reporting(E_ERROR | E_PARSE);
 if(isset($_POST['btn-GoBack']))
 {
 header("Location: index.php");

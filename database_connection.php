@@ -1,20 +1,19 @@
 <?php
-error_reporting(0);
-ini_set('display_errors', 1);
+error_reporting(E_ERROR | E_PARSE);
     session_start();
 	
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
+	$servername = "shoestore-cluster.cluster-ctylf64ucxj3.us-west-2.rds.amazonaws.com";
+	$username = "shoestore";
+	$password = "shoestore";
 	$dbname = "shoestore";
-	
-	
-   
-
-	//connect using mysqli_connect
+ 
     $db2 = new mysqli($servername, $username, $password, $dbname);
     
-   
+   if(!$db2)
+   {
+	   echo "connec fail";
+   }
+
 
     
     try {

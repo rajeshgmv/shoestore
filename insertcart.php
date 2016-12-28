@@ -1,5 +1,5 @@
 <?php
-
+error_reporting(E_ERROR | E_PARSE);
 
 		?>
 										<script>alert('inside');</script>

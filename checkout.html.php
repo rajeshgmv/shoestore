@@ -2,7 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
     include('main-header.html.php');
-	
+	include_once 'insertorders.php';
 
 ?>
      <?php
@@ -19,7 +19,7 @@ if(!isset($_SESSION['is_auth']))
         
          <div class="container">
   <div class="jumbotron">
-    <h1><b>  Your Cart</h1></b>
+    <h1><b>  Payment Page</h1></b>
      <h2><b> <a href="index.php" class="btn btn-danger btn-sm" role="button">Continue Shopping</a> </b></h2>
 </div>
          
@@ -54,7 +54,7 @@ if(!isset($_SESSION['is_auth']))
 
 <?php
 
-include_once 'ShoppingCart.php';
+include_once 'checkout.php';
 
 ?>
 <tr>

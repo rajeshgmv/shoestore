@@ -1,5 +1,5 @@
 ﻿<?php
-
+error_reporting(E_ERROR | E_PARSE);
     include('main-header.html.php');
 ?>
 
@@ -60,7 +60,7 @@
 
         <br>
         <br>
-		
+	<a name="shopnow"></a>	
         <div class="container">
             <div class="col-md-4  well wow bounceInLeft animated" style="visibility:visible;animation-name: bounceInLeft;">
 			<div class='thumbnail' style='height:300px;width:300px;margin:0 auto'>

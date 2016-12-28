@@ -1,13 +1,15 @@
 <?php
 
 include_once 'database_connection.php';
-
+error_reporting(0);
+ini_set('display_errors', 0);
 
 if(isset($_POST['btn-GoBack']))
 {
 header("Location: index.php");
 
-}else{
+}
+if(isset($_POST['btn-add'])){
 
 	
 	$NameOnCard = $_POST['NameOnCard'];
@@ -17,14 +19,27 @@ header("Location: index.php");
 	
 	$useri = $_SESSION['user_id'];
 
-	    $stmt = $pdo->prepare("INSERT INTO hascarddetails(cust_Id,card_no,nameoncard,exp_date) 
-	    	VALUES(:id, :CardNumber, :NameOnCard,:ExpiryDate)");
-		$stmt->bindParam(':id' , $useri);
-		$stmt->bindParam(':CardNumber' , $CardNumber); 
-		$stmt->bindParam(':NameOnCard' , $NameOnCard);
-		$stmt->bindParam(':ExpiryDate' , $ExpiryDate);
-		$stmt->execute();
-
-	header("Location: edit-profile.html.php");
+	    
+		
+		
+		if(mysqli_query($db2, "INSERT INTO hascarddetails(cust_Id,card_no,nameoncard,exp_date) 
+	    	VALUES('$useri', '$CardNumber', '$NameOnCard','$ExpiryDate');"))
+		 {
+	?>
+        <script>alert('card details added');</script>
+        <?php
+		echo "<script>window.location = 'index.php'</script>";
+		}
+	
+	else{
+		?>
+        <script>alert('enter correct details');</script>
+        <?php
+	echo "<script>window.location = 'payment.html.php'</script>";
+	   }
+}
+else{
+	echo "<script>window.location = 'payment.html.php'</script>";
+	
 }
 ?>

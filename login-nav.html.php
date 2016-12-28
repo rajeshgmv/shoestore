@@ -25,9 +25,10 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
+				<li><a href="index.php#shopnow">Shop Now</a></li>
                 <li><a href="category.html.php?category=Deals">Deals</a></li>
                 <li><a href="category.html.php?category=trending">Trending</a></li>
-				<li><a href="#shopnow">Shop Now</a></li>
+				
             </ul>
 
             <ul class="nav navbar-nav navbar-right">

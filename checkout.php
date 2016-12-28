@@ -48,14 +48,25 @@ while($cartrow = $cartres->fetch_assoc())
 								
 								}
 
+                 
+		$carddet=mysqli_query($db2,"SELECT * FROM hascarddetails where cust_Id=$useri");
+		$option = '';
+		$star='************';
+		while($row = $carddet -> fetch_assoc()){
+			$option .= '<option>'.$star.substr($row['card_no'],-4).'</option>';
+			
+		} 
 
-		
-
-				echo '<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td> <a class="btn btn-danger btn-block btn-sm" type="submit" name="btn-proceed" style ="width: 150px" href="checkout.html.php" >Proceed To CheckOut</a></td>
+				echo '<tr>  <td></td><td></td>
+						<td>select your card :</td>
+						
+						<td><select width="100" height="100"  style=" width:120px" name ="quantity">';echo $option; echo '</select></td>
+						<td><a href= "payment.html.php">Add new card</a></td>
+						</tr>
+						<tr><td> &nbsp;&nbsp;&nbsp;  </td> <td> &nbsp;&nbsp;&nbsp;  </td></tr>
+						<tr>
+						<td></td><td></td>
+						<td><button class="btn btn-danger btn-block btn-sm" type="submit" name="btn-proceed" style ="width: 150px">Proceed To Pay</button></td>
 						<td><button class="btn btn-danger btn-block btn-sm" type="submit" name="btn-cancel">Cancel</button></td>
 						
 				</tr>

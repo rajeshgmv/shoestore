@@ -1,6 +1,5 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+error_reporting(E_ERROR | E_PARSE);
     include('main-header.html.php');
 	include_once 'insertorders.php';
 ?>

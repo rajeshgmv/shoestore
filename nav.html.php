@@ -21,8 +21,10 @@
             <ul class="nav navbar-nav">
                 <li><a href="index.php">Home</a></li>
                 <li><a href="about.php">About</a></li>
+				<li><a href="index.php#shopnow">Shop Now</a></li>
                 <li><a href="category.html.php?category=Deals">Deals</a></li>
                 <li><a href="category.html.php?category=trending">Trending</a></li>
+				
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
@@ -37,10 +39,10 @@
                                     <form class="form" role="form" method="post"  accept-charset="UTF-8" id="login-nav">
                                         <div class="form-group">
                                             <label class="sr-only" for="input_email">Email address</label>
-                                            <input type="email" class="form-control" id="input_email" name="input_email" placeholder="Email address" required>
+                                            <input type="email" class="form-control" id="input_email" name="input_email" placeholder="Email address" required value="">
                                         </div>
                                         <div class="form-group">
-                                            <label class="sr-only" for="input_password">Password</label>
+                                            <label class="sr-only" for="input_password" value="">Password</label>
                                             <input type="password" class="form-control" id="input_password" name="input_password" placeholder="Password" required>
                                             <div class="help-block text-right"><a href="forgotpwd.html">Forget password </a></div>
                                         </div>
